@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.sample.contactcard" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>AWS con</name>
+    <description>Contact card sample app.</description>
+    <author email="absachdeva@gmail.com">Abhinav Sachdeva</author>
+    <content src="index.html" />
+    <access origin="*" launch-external="yes"/>	
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	<allow-intent href="tel:*" />
+	<allow-intent href="http:*" />
+	<allow-intent href="https:*" />
+	
+	<!-- <preference name="orientation" value="portrait" /> -->        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="android-installLocation" value="auto" />  <!-- android:install location. 'auto''internalOnly''preferExternal'-->
+	<preference name="stay-in-webview" value="false" />
+	<icon src="images/apple-touch-icon-180x180.png" />
+    <icon src="images/favicon-32x32.png"   			gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="images/favicon-96x96.png"   			gap:platform="android"    gap:qualifier="xhdpi" />
+    <icon src="images/apple-touch-icon-72x72.png"  	gap:platform="android"    gap:qualifier="hdpi" />
+</widget>

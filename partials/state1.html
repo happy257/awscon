@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h1>Home</h1><hr>
+		<div style="text-align:right" >
+			<a ui-sref="carrierList">Carrier List</a>
+		</div>
+		<!-- <h3>{{params.carrier.id}}</h3> -->
+		<div ng-repeat="item in medContacts" ng-show="item.id==params.carrier.id">
+			<h3>{{item.name}}</h3>
+			<p>Contact : {{item.contactInfo}}</p>
+		</div>
+		<div>
+			<hr>All static content here
+		</div>
+	</div>
+</div>
