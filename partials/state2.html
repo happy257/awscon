@@ -1,9 +1,15 @@
 <div class="row">
-	<div class="col-xs-12">
-		<h1>Choose Carrier</h1>
-		<a ui-sref="home">Home</a>
-		<ul>
-			<li ng-repeat="item in carriers" ng-click="showInfo(item)">{{item.label}}</li>
-		</ul>
+	<div class="contact-boxes clearfix carrier-contacts"><h2>Choose Your Carrier</h2>
+		<div class="col-sm-6 col-1 carrier-other">
+			<div ng-repeat="item in carriers" ng-show="!loading">
+				<div ng-class-odd="'orange'" ng-class-even="'blue'" class="item-a" ng-click="showInfo(item)">
+					<p>{{item.carrier}}</p>
+					<!-- <p><a href="{{item.web}}" target="_blank">{{item.web}}</a></p> -->
+				</div>
+			</div>
+			<div ng-show="loading">
+				<h3 class="text-center">Loading...</h3>
+			</div>
+		</div>
 	</div>
 </div>
