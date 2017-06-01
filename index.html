@@ -9,19 +9,32 @@
 <title>Sandbox</title>
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet" type="text/css" />
-
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/angular.min.js"></script>
 <script src="js/angular-ui-router.js"></script>
-<script src="js/jquery-3.2.1.js"></script>
 
 <script src="js/myscript.js"></script>
 <script src="js/controllers.js"></script>
 </head>
 
 <body  style="background:#fdfdfd">
-	<div class="container-fluid" ng-app="myApp">	
+	<div class="container-fluid" ng-app="myApp">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 col-sm-12">
+				<div class="header clearfix">
+					<img src="images/header-contact-card.png" class="img-responsive" alt="My Benefits Contacts">
+					<h1 class="header-text">MyBenefits <span>Contacts</span></h1>
+				</div>
+			</div>
+	  </div>
 		<div class="fader" ui-view></div>
 	</div>
+	<div class="footer clearfix">
+		<div class="col-xs-6"><img src="images/logo-tenent.png" alt="Tenet" class="pull-left"></div>
+	</div>
 </body>
-
 </html>
