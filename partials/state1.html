@@ -1,16 +1,44 @@
-<div class="row">
-	<div class="col-xs-12">
-		<h1>Home</h1><hr>
-		<div style="text-align:right" >
-			<a ui-sref="carrierList">Carrier List</a>
+      <div class="row">
+        <div class="contact-boxes clearfix carrier-contacts"><h2>Important Contacts</h2>
+          <div class="col-sm-12">
+            <div>
+              <div class="orange item-a" style="">
+                <h3>MyBenefits Customer Support Center</h3>
+                <p><a href="tel:8774683638" >877-468-3638</a></p>
+              </div>
+            </div>
+             <div class="med-select" ng-show="params.carrier.carrier==undefined">
+              <div class="blue item-b" style="">
+                <h3>Medical</h3>
+                <p><a href="" ui-sref="carrierList">Select your medical plan carrier (insurance company) <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+              </div>
+            </div>
+			<div ng-show="params.carrier.carrier.length>0">
+				<div class="blue item-b">
+					<h3>{{params.carrier.category}}<span>{{'('+params.carrier.carrier+')'}}</span><span class="pull-right"><a class="med-select-change" ui-sref="carrierList"> <strong>Change Carrier</strong></a></span></h3>
+					<p><a href="params.carrier.TEL_NO" >{{params.carrier.telno}}</a></p>
+					<p><a href="params.carrier.WEB" target="_blank" >{{params.carrier.web}}</a></p>
+					<p class="med-acc-title" 	ng-show="params.carrier.searchTips">Provider search tips:</p>
+					<div class="med-acc-text"  	ng-show="params.carrier.searchTips">
+						<ul><li ng-repeat="item in params.carrier.searchTips track by $index">{{item}}</li></ul>
+					</div>
+				</div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-1 carrier-other">
+			<!-- TEMPLATE 2 BEGIN -->
+            <div ng-repeat="EXP in oth">
+              <div ng-class-odd="'orange'" ng-class-even="'blue'" class="item-a">
+                <h3>{{EXP.category}}</h3>
+                <p><a href={{'tel'+EXP.telno}}>{{EXP.telno}}</a></p>
+                <p><a href="{{EXP.web}}" target="_blank">{{EXP.web}}</a></p>
+              </div>
+            </div>
+			<!-- TEMPLATE 2 END -->
+          </div>
+         </div>
+        <div class="contact-boxes clearfix carrier-question">
+          <h2>Who is your medical plan carrier (insurance company)?</h2>
+          <div class="col-sm-12 col-1"></div>
 		</div>
-		<!-- <h3>{{params.carrier.id}}</h3> -->
-		<div ng-repeat="item in medContacts" ng-show="item.id==params.carrier.id">
-			<h3>{{item.name}}</h3>
-			<p>Contact : {{item.contactInfo}}</p>
-		</div>
-		<div>
-			<hr>All static content here
-		</div>
-	</div>
-</div>
+        </div>
