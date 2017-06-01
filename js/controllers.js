@@ -2,8 +2,8 @@ myApp.controller("state1Ctrl",['$scope','$stateParams','$http',function($scope,$
 	$scope.params=$stateParams;
 	$http({
 		method: 'GET',
-		url:'js/test.php',
-		// 'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
+		url://'js/test.php',
+		 'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
 	})
 	.then(function success(response) {
 		$scope.loading=false;
@@ -11,11 +11,12 @@ myApp.controller("state1Ctrl",['$scope','$stateParams','$http',function($scope,$
 			{category:"CATEGORY1",telno:"1800-190-280",web:"www.dummyurl.com"},
 			{category:"CATEGORY2",telno:"1800-200-280",web:"www.dummyurl.com"},
 			{category:"CATEGORY3",telno:"1800-390-280",web:"www.dummyurl.com"}
-		] 
+		]
 	},function error(response) {
 		console.log(response);
 	});                                                 
 }]);
+
 myApp.controller("state2Ctrl",['$scope','$state','$http', function($scope,$state,$http) {
 	$scope.loading=true;
 	$http({
