@@ -1,0 +1,360 @@
+/*@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');*/
+
+body {
+    background: #fff;
+    /*font-family: Lato, Arial, Helvetica, sans-serif;*/
+    font-family: "Arial", Helvetica, sans-serif;
+	color: #0C2D83;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.header {
+    
+    background-color:#4F81A8;
+	background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative
+}
+.header img {
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+.header-text {
+    
+    font-size: 24px;
+    
+    color: #ffffff;
+    line-height: .8em;
+    
+    padding: 0;
+    position: absolute; 
+    top: 7%;
+    left: 36%;
+}
+.header-text span {
+    font-size: 24px;
+    color: #BBBCBC;
+    display: block;
+    
+}
+.blue {
+    border-left: 8px solid #0C2D83;
+	border-right:1px solid #c8c8c8;
+}
+.lt-blue {
+    border-left: 8px solid #236192;
+	border-right:1px solid #c8c8c8;
+}
+.orange {
+    border-left: 8px solid #F68D2E;
+	border-right:1px solid #c8c8c8;
+}
+.green {
+    border-left: 8px solid #008240;
+	border-right:1px solid #c8c8c8;
+}
+
+.blue {
+    border-left: 8px solid #236192;
+	border-right:1px solid #c8c8c8;
+}
+.item-a, .item-c, .item-e {background: #fff;}
+.item-b, .item-d, .item-f, .med-select {
+    background: #EDEEEE
+}
+
+.empty, .empty.item-d {
+    background: url(../images/header-bkg.jpg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*.contact-boxes {background: #4F81A8;}*/
+.contact-boxes.carrier-question {background: #fff;}
+.contact-boxes h2 {
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 12px 21px;
+    margin: 0;
+    
+    background: #236192;
+    color: #fff
+}
+.contact-boxes div {
+    padding: 0
+}
+.contact-boxes div div {
+    border-bottom: 1px solid #C8C8C8;
+   
+}
+.contact-boxes .col-1 div div {
+    border-right: 1px solid #C8C8C8
+}
+.contact-boxes div div div {
+    padding: 10px 15px;
+    border-bottom: 0
+}
+.contact-boxes div h3 {
+    font-weight: 700
+}
+.contact-boxes div h3, .contact-boxes div p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: .01em
+}
+.contact-boxes a {
+    color: #0C2D83
+}
+.footer {
+    margin-top: 22px;
+    padding-bottom: 22px
+}
+.footer .pull-left {
+    padding-left: 4px;
+    width: 113px;
+    height: 29px
+}
+.footer .pull-right {
+    padding-right: 4px;
+    width: 85px;
+    height: 28px
+}
+
+.carrier-question,.carrier-medical {display:none;}
+.carrier-other, .carrier-contacts {
+   /* display: none; */
+}
+
+.med-acc-text > ul > li
+{
+font-size:16px;
+}
+
+.col-1 a
+{
+display:block;
+outline:none;	
+}
+
+.carrier-contacts .med-acc-title {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.carrier-medical span
+{
+font-weight:normal;
+}
+
+a[href^="tel:"] {
+outline:none;
+}
+
+a
+{
+outline:none;
+}
+.med-acc-text > ul
+{
+padding-left:8px;list-style:none;
+}
+
+
+@media (max-width: 400px)
+{
+.header-text {
+	top:0;
+    font-size: 30px;
+    padding: 0 0;
+   line-height: 0.9;
+}
+.header-text span {
+    font-size: 30px;
+}	
+}
+
+@media (min-width: 400px)  and  (max-width: 768px)
+{
+.header-text {
+    font-size: 46px;
+    padding: 12px 0;
+    line-height: 0.8;
+}
+.header-text span {
+    font-size: 46px;
+}	
+}
+
+@media (max-width: 768px) {
+/*.col-2 > div > .item-a
+{
+background: #EDEEEE !important;
+}
+
+.col-2 > div > .item-c
+{
+background: #EDEEEE !important;
+}
+
+.col-2 > div > .item-b
+{
+background: #ffffff !important;
+}
+
+.col-2 > div > .item-d
+{
+background: #ffffff !important;
+}
+
+.col-2 > div > .item-e
+{
+background: #EDEEEE !important;
+}
+*/
+}
+
+@media (min-width: 768px) {
+.header {
+    
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -15px;
+    margin-right: -15px
+}
+.header-text {
+    font-size: 54px;
+    padding: 38px 0;
+    line-height: 0.8;
+}
+.header-text span {
+    font-size: 54px
+}
+.contact-boxes h2 {
+    font-size: 30px;
+    padding: 20px 24px;
+}
+.contact-boxes div h3, .contact-boxes div p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.4em;
+    letter-spacing: .01em
+}
+
+.med-acc-text > ul > li
+{
+font-size:16px;
+}
+
+.footer .pull-left {
+    padding-left: 8px;
+    width: 158px;
+    height: 40px
+}
+.footer .pull-right {
+    padding-right: 8px;
+    width: 125px;
+    height: 40px
+}
+.item-a, .item-c, .item-e {background: #fff;}
+.item-b, .item-d, .item-f, .med-select {
+    background: #EDEEEE
+}
+}
+
+@media (min-width: 992px) {
+.header-text {
+    font-size: 60px;
+    padding: 38px 0;
+	line-height: 0.9;
+}
+.header-text span {
+    font-size: 60px
+}
+.contact-boxes div div div {
+    padding: 15px;
+    border-bottom: 0
+}
+.contact-boxes div h3, .contact-boxes div p {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    line-height: 1.4em;
+    letter-spacing: .01em
+}
+
+.med-acc-text > ul > li
+{
+font-size:17px;
+}
+.footer .pull-left {
+    padding-left: 8px;
+    width: 177px;
+    height: 45px
+}
+.footer .pull-right {
+    padding-right: 8px;
+    width: 140px;
+    height: 45px
+}
+}
+
+@media screen and (min-width: 1200px) {
+.header-text {
+    font-size: 65px;
+    padding: 50px 0;
+    line-height: 0.9;
+}
+.header-text span {
+    font-size: 65px
+}
+}
+/* FOR IE 8 TO PROPERLY USE MEDIA QUERY
+   ================================================== */
+@media screen and (min-width: 1200px) {
+body.ie {
+}
+}
+
+@media screen and (max-width: 768px) {
+body.ie {
+.col-2 > div > .item-a
+{
+background: #EDEEEE !important;
+}
+
+.col-2 > div > .item-c
+{
+background: #EDEEEE !important;
+}
+
+.col-2 > div > .item-b
+{
+background: #ffffff !important;
+}
+
+.col-2 > div > .item-d
+{
+background: #ffffff !important;
+}
+
+.col-2 > div > .item-e
+{
+background: #EDEEEE !important;
+}
+
+}
+}
