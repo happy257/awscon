@@ -16,8 +16,8 @@
 			<div ng-show="params.carrier.carrier.length>0">
 				<div class="blue item-b">
 					<h3>{{params.carrier.category}}<span>{{'('+params.carrier.carrier+')'}}</span><span class="pull-right"><a class="med-select-change" ui-sref="carrierList"> <strong>Change Carrier</strong></a></span></h3>
-					<p><a href="params.carrier.TEL_NO" >{{params.carrier.telno}}</a></p>
-					<p><a href="params.carrier.WEB" target="_blank" >{{params.carrier.web}}</a></p>
+					<p><a href="{{'tel:'+params.carrier.telno}}">{{params.carrier.telno}}</a></p>
+					<p><a href="{{'//'+params.carrier.web}}" target="_blank" >{{params.carrier.web}}</a></p>
 					<p class="med-acc-title" 	ng-show="params.carrier.searchTips">Provider search tips:</p>
 					<div class="med-acc-text"  	ng-show="params.carrier.searchTips">
 						<ul><li ng-repeat="item in params.carrier.searchTips track by $index">{{item}}</li></ul>
@@ -30,8 +30,8 @@
             <div ng-repeat="EXP in oth">
               <div ng-class-odd="'orange'" ng-class-even="'blue'" class="item-a">
                 <h3>{{EXP.category}}</h3>
-                <p><a href={{'tel'+EXP.telno}}>{{EXP.telno}}</a></p>
-                <p><a href="{{EXP.web}}" target="_blank">{{EXP.web}}</a></p>
+                <p><a href="{{'tel:'+EXP.telno}}">{{EXP.telno}}</a></p>
+                <p><a href="{{'//'+EXP.web}}" target="_blank">{{EXP.web}}</a></p>
               </div>
             </div>
 			<!-- TEMPLATE 2 END -->
