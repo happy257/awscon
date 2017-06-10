@@ -1,5 +1,7 @@
 myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$stateParams,$http) {
 	$scope.params=$stateParams;
+    $scope.offline=false;
+    $scope.loading=true;
 	$http({
 		method: 'GET',
 		url:'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
@@ -7,13 +9,18 @@ myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$st
 	.then(function success(response) {
 		$scope.loading=false;
 		$scope.oth=response.data.othCarriers;
+        localStorage.appCache=JSON.stringify(response.data);
 	},function error(response) {
-		console.log(response);
+		$scope.loading=false;
+        $scope.offline=true;
+		$scope.oth=JSON.parse(localStorage.appCache).othCarriers;
+        console.log("Error:",response);
 	});                                                 
 }]);
 
 myApp.controller("carrierListCtrl",['$scope','$state','$http', function($scope,$state,$http) {
 	$scope.loading=true;
+    $scope.offline=false;
 	$http({
 		method: 'GET',
 		url:'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
@@ -21,8 +28,14 @@ myApp.controller("carrierListCtrl",['$scope','$state','$http', function($scope,$
 		$scope.loading=false;
         console.log(response)
 		$scope.carriers=response.data.medcarriers;
+        localStorage.appCache=JSON.stringify(response.data);
 	  }, function error(response) {
-		console.log(response);
+        $scope.loading=false;
+        $scope.offline=true;
+        $scope.carriers=
+            JSON.parse(localStorage.appCache).medcarriers;
+        //$scope.$apply();
+		console.log("Error:",response);
 	  });
 	$scope.showInfo=function(data){
 		$state.go('home',{carrier:data})
