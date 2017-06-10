@@ -13,8 +13,7 @@
 	<!-- <preference name="orientation" value="portrait" /> -->        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="android-installLocation" value="auto" />  <!-- android:install location. 'auto''internalOnly''preferExternal'-->
 	<preference name="stay-in-webview" value="false" />
-	<icon src="images/apple-touch-icon-180x180.png" />
+	
     <icon src="images/favicon-32x32.png"   			gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="images/favicon-96x96.png"   			gap:platform="android"    gap:qualifier="xhdpi" />
-    <icon src="images/apple-touch-icon-72x72.png"  	gap:platform="android"    gap:qualifier="hdpi" />
 </widget>
