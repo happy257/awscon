@@ -1,16 +1,20 @@
-      <div class="row">
+  <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-12">
+            <div class="header clearfix">
+                <img src="images/header-contact-card.png" class="img-responsive" alt="My Benefits Contacts">
+                <h1 class="header-text">MyBenefits <span>Contacts</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="contact-boxes clearfix carrier-contacts"><h2>Important Contacts</h2>
           <div class="col-sm-12">
-            <div>
-              <div class="orange item-a" style="">
-                <h3>MyBenefits Customer Support Center</h3>
-                <p><a href="tel:8774683638" >877-468-3638</a></p>
-              </div>
-            </div>
              <div class="med-select" ng-show="params.carrier.carrier==undefined">
               <div class="blue item-b" style="">
                 <h3>Medical</h3>
-                <p><a href="" ui-sref="carrierList">Select your medical plan carrier (insurance company) <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+                  
+                <p><a href="" ui-sref="carrierList">Select your medical plan carrier (insurance company) <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </p>
               </div>
             </div>
 			<div ng-show="params.carrier.carrier.length>0">
@@ -42,3 +46,6 @@
           <div class="col-sm-12 col-1"></div>
 		</div>
         </div>
+<div class="footer clearfix">
+		<div class="col-xs-6"><img src="images/logo-tenent.png" alt="Tenet" class="pull-left"></div>
+	</div>
