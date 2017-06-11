@@ -25,7 +25,7 @@
 				<div class="orange item-b">
 					<h3>{{params.carrier.category}}<span>{{'('+params.carrier.carrier+')'}}</span><span class="pull-right"><a class="med-select-change" ui-sref="carrierList"> <strong>Change Carrier</strong></a></span></h3>
 					<p><a href="{{'tel:'+params.carrier.telno}}">{{params.carrier.telno}}</a></p>
-					<p><a href="{{'//'+params.carrier.web}}" target="_system" >{{params.carrier.web}}</a></p>
+					<p><a href="{{'http://'+params.carrier.web}}"   >{{params.carrier.web}}</a></p>
 					<p class="med-acc-title" 	ng-show="params.carrier.searchTips">Provider search tips:</p>
 					<div class="med-acc-text"  	ng-show="params.carrier.searchTips">
 						<ul><li ng-repeat="item in params.carrier.searchTips track by $index">{{item}}</li></ul>
@@ -43,7 +43,7 @@
               <div ng-class-odd="'blue'" ng-class-even="'orange'" class="item-a">
                 <h3>{{EXP.category}}</h3>
                 <p><a href="{{'tel:'+EXP.telno}}">{{EXP.telno}}</a></p>
-                <p><a href="{{'//'+EXP.web}}" target="_system">{{EXP.web}}</a></p>
+                <p><a href="{{'http://'+EXP.web}}">{{EXP.web}}</a></p>
               </div>
             </div>
 			<!-- TEMPLATE 2 END -->
