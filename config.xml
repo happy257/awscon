@@ -5,8 +5,9 @@
     <author email="absachdeva@gmail.com">Abhinav Sachdeva</author>
     <content src="index.html" />
     <access origin="*" launch-external="yes"/>	
-	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
-    	<gap:plugin name="cordova-plugin-inappbrowser" spec="*" source="npm" />	
+	
+	<plugin name="cordova-plugin-inappbrowser" spec="1.7.1" />
+	<plugin name="cordova-plugin-whitelist" spec="1.3.2" />
 	
 	<allow-intent href="tel:*" />
 	<allow-intent href="http:*" />
