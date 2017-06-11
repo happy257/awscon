@@ -2,6 +2,12 @@ myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$st
 	$scope.params=$stateParams;
     $scope.offline=false;
     $scope.loading=true;
+    $scope.open=function(url){
+        if(typeof cordova!='undefined')
+            cordova.InAppBrowser.open(url, _system);
+        else
+            alert(url)
+    }
 	$http({
 		method: 'GET',
 		url:'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
