@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.sample.contactcard" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>ContactCard AWS Prototype</name>
-    <description>Contact card sample app.</description>
+    <name>Tenet ContactCard</name>
+    <description>Contact card sample app for Tenet Health.</description>
     <author email="absachdeva@gmail.com">Abhinav Sachdeva</author>
     <content src="index.html" />
     <access origin="*" launch-external="yes"/>	
@@ -9,10 +9,10 @@
 	<allow-intent href="tel:*" />
 	<allow-intent href="http:*" />
 	<allow-intent href="https:*" />
-	
-	<!-- <preference name="orientation" value="portrait" /> -->        <!-- all: default means both landscape and portrait are enabled -->
-    <preference name="android-installLocation" value="auto" />  <!-- android:install location. 'auto''internalOnly''preferExternal'-->
+    
+    
 	<preference name="stay-in-webview" value="false" />
+	<preference name="orientation" value="portrait" />   <preference name="android-installLocation" value="auto" />
 	
     <icon src="images/favicon-32x32.png"   			gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="images/favicon-96x96.png"   			gap:platform="android"    gap:qualifier="xhdpi" />
