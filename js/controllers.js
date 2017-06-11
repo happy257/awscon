@@ -1,10 +1,5 @@
 myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$stateParams,$http) {
-    $(document).on('click','a',function(e){
-        e.preventDefault();
-        ordova.InAppBrowser.open(encodeURI($(this).href),'_system')
-    })
-    
-	$scope.params=$stateParams;
+    $scope.params=$stateParams;
     $scope.offline=false;
     $scope.loading=true;
     $scope.open=function(url){
