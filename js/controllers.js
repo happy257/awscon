@@ -24,7 +24,8 @@ myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$st
 	});                                                 
 }]);
 
-myApp.controller("carrierListCtrl",['$scope','$state','$http', function($scope,$state,$http) {
+myApp.controller("carrierListCtrl",['$scope','$state','$http','$location' ,function($scope,$state,$http,$location) {
+	$location.replace();
 	$scope.loading=true;
     $scope.offline=false;
 	$http({
@@ -44,10 +45,13 @@ myApp.controller("carrierListCtrl",['$scope','$state','$http', function($scope,$
 		console.log("Error:",response);
 	  });
 	$scope.showInfo=function(data){
-		$state.go('home',{carrier:data})
+		$state.go('home',{carrier:data},{location: 'replace'})
+		//$state.go(stateC, null, )
+ 
+
 	}
 }]);
 
 myApp.controller("splashCtrl",['$scope','$state','$timeout', function($scope,$state,$timeout) {
-    $timeout(function(){$state.go('home')},500);
+    $timeout(function(){$state.go('home',null,{location: 'replace'})},500);
 }]);
