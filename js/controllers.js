@@ -10,7 +10,8 @@ myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$st
     }
 	$http({
 		method: 'GET',
-		url:'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
+		url:'https://x97qzmvtek.execute-api.us-east-2.amazonaws.com/prod/'
+		//'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
 	})
 	.then(function success(response) {
 		$scope.loading=false;
@@ -30,7 +31,8 @@ myApp.controller("carrierListCtrl",['$scope','$state','$http','$location' ,funct
     $scope.offline=false;
 	$http({
 		method: 'GET',
-		url:'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
+		url:'https://x97qzmvtek.execute-api.us-east-2.amazonaws.com/prod/'
+		//'https://r7rwh2tcgd.execute-api.us-west-2.amazonaws.com/prod/sampleres'
 	}).then(function success(response) {
 		$scope.loading=false;
         console.log(response)
@@ -46,8 +48,6 @@ myApp.controller("carrierListCtrl",['$scope','$state','$http','$location' ,funct
 	  });
 	$scope.showInfo=function(data){
 		$state.go('home',{carrier:data},{location: 'replace'})
-		//$state.go(stateC, null, )
- 
 
 	}
 }]);
