@@ -1,29 +1,30 @@
 myApp.controller("homeCtrl",['$state','$scope','$stateParams','$http',function($state,$scope,$stateParams,$http) {
-    var push = 
-    PushNotification.init(
-        {"android": {"senderID": "848679895857"},
-         "ios": {"alert": "true", "badge": "true", "sound": "true"},
-         "windows": {} 
-    });
-    push.on('registration', function(data) {
-       alert(JSON.stringify(data))
-    });
+    if(typeof PushNotification!='undefined'){
+        var push = 
+        PushNotification.init(
+            {"android": {"senderID": "848679895857"},
+             "ios": {"alert": "true", "badge": "true", "sound": "true"},
+             "windows": {} 
+        });
+        push.on('registration', function(data) {
+           alert(JSON.stringify(data))
+        });
 
-    push.on('notification', function(data) {
-        alert(JSON.stringify(data))
-        // data.message,
-        // data.title,
-        // data.count,
-        // data.sound,
-        // data.image,
-        // data.additionalData
-    });
+        push.on('notification', function(data) {
+            alert(JSON.stringify(data))
+            // data.message,
+            // data.title,
+            // data.count,
+            // data.sound,
+            // data.image,
+            // data.additionalData
+        });
 
-    push.on('error', function(e) {
-        alert(JSON.stringify(e))
-        // e.message
-    });
-    
+        push.on('error', function(e) {
+            alert(JSON.stringify(e))
+            // e.message
+        });
+    }
     //-----------------------------    
     $scope.params=$stateParams;
     $scope.offline=false;
