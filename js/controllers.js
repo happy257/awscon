@@ -24,6 +24,13 @@ myApp.controller("homeCtrl",['$state','$scope','$stateParams','$http',function($
             alert(JSON.stringify(e))
             // e.message
         });
+    }else{
+        alert("PushNotification is undefined");
+        setInterval(function(){
+            if(typeof PushNotification!='undefined'){
+                alert("Ready!")
+            }
+        },200)
     }
     //-----------------------------    
     $scope.params=$stateParams;
