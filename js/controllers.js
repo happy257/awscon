@@ -1,4 +1,4 @@
-myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$stateParams,$http) {
+myApp.controller("homeCtrl",['$state','$scope','$stateParams','$http',function($state,$scope,$stateParams,$http) {
     $scope.params=$stateParams;
     $scope.offline=false;
     $scope.loading=true;
@@ -7,6 +7,9 @@ myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$st
             cordova.InAppBrowser.open(url, _system);
         else
             alert(url)
+    }
+    $scope.moveTo=function(stateName){
+        $state.go(stateName,null,{location: 'false'})
     }
 	$http({
 		method: 'GET',
@@ -25,8 +28,7 @@ myApp.controller("homeCtrl",['$scope','$stateParams','$http',function($scope,$st
 	});                                                 
 }]);
 
-myApp.controller("carrierListCtrl",['$scope','$state','$http','$location' ,function($scope,$state,$http,$location) {
-	$location.replace();
+myApp.controller("carrierListCtrl",['$scope','$state','$http',function($scope,$state,$http) {
 	$scope.loading=true;
     $scope.offline=false;
 	$http({
