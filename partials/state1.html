@@ -15,13 +15,13 @@
               <div class="orange item-b" style="">
                 <h3>Medical</h3>
                   
-                <p><a href="" ui-sref="carrierList">Select your medical plan carrier (insurance company) <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <p><a href="" ng-click="moveTo('carrierList')">Select your medical plan carrier (insurance company) <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                 </p>
               </div>
             </div>
             <div ng-show="params.carrier.carrier.length>0">
 				<div class="orange item-b">
-					<h3>{{params.carrier.category}}<span>{{'('+params.carrier.carrier+')'}}</span><span class="pull-right"><a class="med-select-change" ui-sref="carrierList"> <strong>Change Carrier</strong></a></span></h3>
+					<h3>{{params.carrier.category}}<span>{{'('+params.carrier.carrier+')'}}</span><span class="pull-right"><a class="med-select-change" ng-click="moveTo('carrierList')"> <strong>Change Carrier</strong></a></span></h3>
 					<p><a href="{{'tel:'+params.carrier.telno}}">{{params.carrier.telno}}</a></p>
 					<p><a href="{{'http://'+params.carrier.web}}"   >{{params.carrier.web}}</a></p>
 					<p class="med-acc-title" 	ng-show="params.carrier.searchTips">Provider search tips:</p>
