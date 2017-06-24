@@ -1,4 +1,7 @@
-if(typeof PushNotification!='undefined'){
+document.addEventListener('deviceready', onDeviceReady, false);    
+function onDeviceReady(){
+    //alert("device ready")
+    if(typeof PushNotification!='undefined'){
     var push = PushNotification.init(
         {"android": {"senderID": "848679895857"},
          "ios": {"alert": "true", "badge": "true", "sound": "true"},
@@ -24,11 +27,7 @@ if(typeof PushNotification!='undefined'){
         alert(JSON.stringify(e))
         // e.message
     });
-}else{
-    alert("PushNotification is undefined");
-    setInterval(function(){
-        if(typeof PushNotification!='undefined'){
-            alert("Ready!")
-        }
-    },200)
+    }else{
+        alert("PushNotification is undefined");
+    }
 }
