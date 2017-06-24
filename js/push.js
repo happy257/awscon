@@ -3,7 +3,7 @@ function onDeviceReady(){
     //alert("device ready")
     if(typeof PushNotification!='undefined'){
     var push = PushNotification.init(
-        {"android": {"senderID": "848679895857"},
+        {"android": {"senderID": "848679895857","forceShow":"true"},
          "ios": {"alert": "true", "badge": "true", "sound": "true"},
          "windows": {} 
     });
