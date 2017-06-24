@@ -8,20 +8,22 @@ function onDeviceReady(){
          "windows": {} 
     });
     
-    push.on('registration', function(data) {
-        alert("Device registered for push notifications.")
+    if(localStorage.getItem("PushMsgRegId")==null){
+        push.on('registration', function(data) {
+            alert("Device registered for push notifications.")
+        //  alert(JSON.stringify(data))
+            localStorage.setItem("PushMsgRegId",data)
+        });
+    }
+    push.on('notification', function(data) {
         alert(JSON.stringify(data))
-    });
-
-//    push.on('notification', function(data) {
-//        alert(JSON.stringify(data))
 //        // data.message,
 //        // data.title,
 //        // data.count,
 //        // data.sound,
 //        // data.image,
 //        // data.additionalData
-//    });
+    });
 
     push.on('error', function(e) {
         alert(JSON.stringify(e))
