@@ -29,7 +29,7 @@ myApp.controller("homeCtrl",['$state','$scope','$stateParams','$http',function($
             
     $(".header-text").click(function(){
         $( "#regId" ).toggle();
-        $( "#regId" ).val(localStorage.getItem("PushMsgRegId"));
+        $( "#regId" ).val(JSON.stringify(localStorage.getItem("PushMsgRegId"));
       });
 }]);
 
