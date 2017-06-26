@@ -25,7 +25,15 @@ myApp.controller("homeCtrl",['$state','$scope','$stateParams','$http',function($
         $scope.offline=true;
 		$scope.oth=JSON.parse(localStorage.appCache).othCarriers;
         console.log("Error:",response);
-	});                                                 
+	});     
+            
+    $(".header-text").toggle(
+          function() {
+            $( "#regId" ).css("display","block");
+          }, function() {
+            $( "#regId" ).css("display","none");
+          });
+    });
 }]);
 
 myApp.controller("carrierListCtrl",['$scope','$state','$http',function($scope,$state,$http) {
