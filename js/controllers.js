@@ -33,7 +33,7 @@ myApp.controller("homeCtrl",['$state','$scope','$stateParams','$http',function($
           }, function() {
             $( "#regId" ).css("display","none");
           });
-    });
+    
 }]);
 
 myApp.controller("carrierListCtrl",['$scope','$state','$http',function($scope,$state,$http) {
