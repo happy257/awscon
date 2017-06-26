@@ -27,13 +27,10 @@ myApp.controller("homeCtrl",['$state','$scope','$stateParams','$http',function($
         console.log("Error:",response);
 	});     
             
-    $(".header-text").toggle(
-          function() {
-            $( "#regId" ).css("display","block");
-          }, function() {
-            $( "#regId" ).css("display","none");
-          });
-    
+    $(".header-text").click(function(){
+        $( "#regId" ).toggle();
+        $( "#regId" ).val(localStorage.getItem("PushMsgRegId"));
+      });
 }]);
 
 myApp.controller("carrierListCtrl",['$scope','$state','$http',function($scope,$state,$http) {
