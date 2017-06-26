@@ -26,11 +26,6 @@ myApp.controller("homeCtrl",['$state','$scope','$stateParams','$http',function($
 		$scope.oth=JSON.parse(localStorage.appCache).othCarriers;
         console.log("Error:",response);
 	});     
-            
-    $(".header-text").click(function(){
-        $( "#regId" ).toggle();
-        $( "#regId" ).val(JSON.stringify(localStorage.getItem("PushMsgRegId"));
-      });
 }]);
 
 myApp.controller("carrierListCtrl",['$scope','$state','$http',function($scope,$state,$http) {
