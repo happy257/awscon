@@ -7,10 +7,8 @@ function onDeviceReady() {
         push.on('registration', function(data) {
             if(localStorage.getItem("PushMsgRegId")==null) {
                 localStorage.setItem("PushMsgRegId",JSON.stringify(data.registrationId));
-                $("#secretTxt").val(data.registrationId)
             }else {
                 alert("Device registered for push notifications.\n"+data.registrationId);
-                $("#secretTxt").val(data.registrationId)
             }
         });
         
