@@ -15,12 +15,11 @@ function onDeviceReady() {
                         },
                     contentType: "application/json"
                 }).done(function(a,b,c) {
-                    alert(JSON.stringify(a));
-                    alert(b)
-                    alert(JSON.stringify(c))
+                    //Register to DynamoDB complete
                 });
             }else {
-                alert("Device registered for push notifications.\n"+data.registrationId);
+                //Check if device is already registered
+                //alert("Device registered for push notifications.\n"+data.registrationId);
             }
         });
         
