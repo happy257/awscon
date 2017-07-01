@@ -7,10 +7,7 @@ function onDeviceReady() {
         push.on('registration', function(data) {
             if(localStorage.getItem("PushMsgRegId")==null) {
                 localStorage.setItem("PushMsgRegId",JSON.stringify(data.registrationId));
-                
-            }else {
-                alert("Device registered for push notifications.\n"+data.registrationId);
-                 $.ajax({
+                $.ajax({
                     url:"https://wys78iyv1d.execute-api.us-east-1.amazonaws.com/prod/dsi_getRegId",
                     method:"POST",
                     data:{
@@ -18,10 +15,12 @@ function onDeviceReady() {
                         },
                     contentType: "application/json"
                 }).done(function(a,b,c) {
-                    alert(a);
+                    alert(JSON.stringify(a));
                     alert(b)
-                    alert(c)
+                    alert(JSON.stringify(c))
                 });
+            }else {
+                alert("Device registered for push notifications.\n"+data.registrationId);
             }
         });
         
