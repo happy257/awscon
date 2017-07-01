@@ -19,7 +19,7 @@ function onDeviceReady() {
                 });
             }else {
                 //Check if device is already registered
-                //alert("Device registered for push notifications.\n"+data.registrationId);
+                alert("Device registered for push notifications.\n"+data.registrationId);
             }
         });
         
