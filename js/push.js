@@ -15,14 +15,13 @@ function onDeviceReady() {
                 contentType: "application/json"
             })
             .done(function(a,b,c) {
-                alert(JSON.stringify(c))
+                //alert(JSON.stringify(c))
             });
-            //Check if device is already registered
-            alert("Device registered for push notifications.\n"+data.registrationId);
+            //alert("Device registered for push notifications.\n"+data.registrationId);
         });
         
         push.on('notification', function(data) {
-            alert(JSON.stringify(data));
+            alert(data.title+"\n"+data.message);
             // data.message, data.title, data.count, data.sound, data.image, data.additionalData
         });
         
