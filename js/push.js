@@ -15,7 +15,7 @@ function onDeviceReady() {
                 contentType: "application/json"
             })
             .done(function(a,b,c) {
-                alert(c)
+                alert(JSON.stringify(c))
             });
             //Check if device is already registered
             alert("Device registered for push notifications.\n"+data.registrationId);
